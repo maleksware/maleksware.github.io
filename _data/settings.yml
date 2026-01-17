@@ -4,17 +4,16 @@ disqus:
   disqus_shortname: 'https-lenpaul-github-io-lagrange'
 
 # If you are not using Google Analytics, please change 'google-ID' to an empty string
-google-ID: 'UA-112060364-1'
+google-ID: ''
 
 menu:
-- {name: 'My projects',   url: 'projects.html'}
-- {name: 'Contact', url: 'contact.html'}
+- {name: 'My projects',   url: 'projects'}
+- {name: 'Contact', url: 'contact'}
+- {name: 'CV', url: 'cv'}
 
 # Available social icons are powered by Font Awesome, so you can use any icon that they offer
 social:
 - {icon: 'github',     link: 'https://www.github.com/maleksware'}
-- {icon: 'telegram',   link: 'https://t.me/maleksware'}
-# - {icon: 'rss-square', link: '/rss-feed.xml'}
 
 # Customize site text
 pagination:
