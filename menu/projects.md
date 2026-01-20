@@ -4,11 +4,7 @@ title: My projects
 permalink: /projects
 ---
 
-# WIP
-
-I'm currently working on improving [orienboard](https://github.com/maleksware/orienboard) and fixing two annoying printing bugs in [MeOS](https://www.melin.nu/meos/en/), the orienteering system used across Australia and, in particular, by Orienteering ACT.
-
-# Completed/published
+Where a link is absent, the source code is private. At least for now.
 
 ## [parsers](https://github.com/maleksware/parsers) (Haskell)
 
