@@ -4,19 +4,22 @@ title: My projects
 permalink: /projects
 ---
 
-Where a link is absent, the source code is private. At least for now.
-
 ## [parsers](https://github.com/maleksware/parsers) (Haskell)
 
 A couple of toy parsers for JSON, lambda expressions and others (WIP). Made with Haskell from scratch.
 
-## orienboard (Flask, SocketIO)
+## [orienboard](https://github.com/maleksware/orienboard) (Flask, SocketIO)
 
 A system for displaying live orienteering results on independent screens. Formerly [meshO Leaderboard](https://mesho.live) (my system was used until transition to a different stack).
 
-The main priorities for this system are reliability in bush conditions and complete usability offline (critical for working in Australian outbacks, where orienteering events are normally held). The system is designed to be extendable to accept input from many platforms, but the only one currently supported is the MeOS information server.
+The main priorities for this system were reliability in bush conditions and complete usability offline
+(critical for working in Australian outbacks, where orienteering events are normally held).
+The system was designed to be extendable to accept input from many platforms,
+but the only one actually supported is the MeOS information server.
 
-_The code is currently being reworked to satisfy at least some professional codebase standards, and will be released soon._
+Orienboard was not well designed because of my youth and inexperience,
+and I don't have plans for its future maintenance. A refactoring attempt can be seen
+in [branch rework-models](https://github.com/maleksware/orienboard/tree/rework-models).
 
 ## uc-labels (Python, Typst)
 
