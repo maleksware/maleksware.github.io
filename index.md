@@ -9,7 +9,7 @@ I'm also known as Alex or, occasionally, Sasha (or other [variations](https://ww
 
 ### Education
 
-I'm undergoing an undergraduate program in the ANU - Bachelor of Advanced Computing, expected graduation 2028. I have graduated from Canberra Grammar School with an IB diploma amongst the best ten students in the cohort.
+I'm doing an undergraduate degree in the ANU - Bachelor of Advanced Computing, expected graduation 2028. I have graduated from Canberra Grammar School with an IB diploma amongst the best ten students in the cohort.
 
 ### Projects
 
@@ -17,7 +17,7 @@ See a comprehensive list [here]({{site.url}}/projects).
 
 ### Employment & experience
 
-- Casual staff member at Canberra Grammar School, namely the IT co-curricular, [Code Cadets](https://codecadets.com), since 2025. I am mostly teaching students in year 7-8, but sometimes assist with classes up to year 12.
+- Casual staff member at [Canberra Grammar School](https://cgs.act.edu.au), namely the IT co-curricular, [Code Cadets](https://codecadets.com), since 2025. I am mostly teaching students in years 7-8, but sometimes assist with classes up to year 12.
 - Private tutor in mathematics (have taught a talented primary school student and prepared him for Australian maths competitions) since 2024.
 - Certified football (soccer) referee in the ACT. Have been actively involved in officiating junior winter football since 2024.
 - Active volunteer for Orienteering ACT, help mainly with IT on competitions (including the Australian MTB Orienteering Carnival 2024).
