@@ -25,7 +25,7 @@ insights this course is designed to provide.
 
 2. Haskell has really simple syntax. Essentially (in this course anyway), it's built around 5 things: function application, pattern matching, currying (aka partial application), recursion and polymorphism. Understanding how each of those things works (**by going to labs and working on lectures**) will give you all you need to know about Haskell. No, you don't have to know what a `Monad` is.
 
-3. Really **do** listen in the first lectures of the course that teach you about functions and sets. Not understanding that functions are mappings between sets will make your experience painful.
+3. Really **do** listen in the first lectures of the course that teach you about functions and sets. Not understanding that functions are mappings between sets will make your experience painful. After all, Haskell's type system and runtime semantics (how the program is executed) are both based on sets and functions between them.
 
 4. The hardest theoretical thing is recursion. It is cornerstone to every single problem that you will have to solve to get a pass. There are millions of ways people explain it online and at ANU, and the latter are often really great. I think of recursion as a promise (not to be confused with `Promise` in JS/TS/...). When implementing a recursive function, I think in the following way:
 
@@ -51,7 +51,7 @@ insights this course is designed to provide.
         -- in the list anyway, so why not use that?
     ```
 
-4. A note on syntax: it is not commonly explained that way, so I'll explain it here. You may remeber that the syntax for guards is really confusing sometimes. Guards (`|`-expressions), as taught in COMP1100, can be used in function definitions and `case ... of` expressions. That is correct, but then it's hard to remember where `=` and `->` go in those expressions (especially when you have nested case-ofs).
+4. (Skip this bit if it looks all Greek to you, it'll make sense when you actually do the course). A note on syntax: it is not commonly explained that way, so I'll explain it here. You may remeber that the syntax for guards is really confusing sometimes. Guards (`|`-expressions), as taught in COMP1100, can be used in function definitions and `case ... of` expressions. That is correct, but then it's hard to remember where `=` and `->` go in those expressions (especially when you have nested case-ofs).
 
     I have seen a great comment that "guards are restrictions on pattern matching". Function definitions are pattern matching: the following snippets are equivalent.
 
@@ -68,10 +68,29 @@ insights this course is designed to provide.
         Nothing -> Nothing
     ```
 
-    The former way is not recommended because if you forget a case, your function will be partial
-    (undefined for some inputs) and that's bad. You can't forget a case in a `case ... of` because the code will not compile.
+    *The former way is not recommended because if you forget a case, your function will be partial
+    (undefined for some inputs) and that's bad. You can't forget a case in a `case ... of` because the code will not compile.*
 
-    Guards can be placed after any pattern matching. Be careful to consider all cases - the compiler cannot verify that you've covered all possibilities in guards. (Use `otherwise`.)
+    **Back to the point**: Guards can be placed after any pattern matching. Be careful to consider all cases - the compiler cannot verify that you've covered all possibilities in guards. (Use `otherwise`.)
+
+    Consider the following: a function that tries to divide a `Maybe Int` value by 2.
+
+    ```haskell
+    safeDivide :: Maybe Int -> Maybe Int
+    safeDivide mx = case mx of
+        Just x | x `mod` 2 == 0 -> Just (x `div` 2)
+               | otherwise  -> Nothing
+        _ -> Nothing
+    ```
+    
+    See how the guards are placed right after we matched on `Just x`? And the arrow after the guard expression is just the arrow from the pattern match. It works exactly the same way with function definitions, too:
+
+    ```haskell
+    safeDivide :: Maybe Int -> Maybe Int
+    safeDivide (Just x) | x `mod` 2 == 0 = Just (x `div` 2)
+                        | otherwise  = Nothing
+    safeDivide _ = Nothing
+    ```
 
 6. Embrace higher order functions. This will be the main piece of advice you'll get when preparing for assessments, but for real, you should know how to implement `map`, `foldr`, `foldl` and sometimes `filter` for every data structure you see in the course (`BinaryTree` and `RoseTree` being the main examples). You should really understand how associativity affects the results of `fold`, and how that is reflected in implementations.
 
